@@ -134,7 +134,9 @@ nav{
 .contact{
     height: 90px;
     padding: 10px 20px;
+    margin-bottom: 1px solid;
 }
+
 
 .contact_name{
     height: 100%;
