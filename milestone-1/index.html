@@ -49,7 +49,32 @@
             <!-- qui costruiremo la finestra dedicata alla chat con il contatto selezionato -->
             <div class="chat_window">
 
-                <header id="chat_window_header">
+                <header class="flex" id="chat_window_header">
+
+                    <div class="contact flex">
+
+                        <img class="avatar" :src="'../img/avatar' + contacts[counter].avatar + '.jpg'" :alt="user[0].name">
+
+                        <div class="chat_info">
+                            
+                            <h2 class="contact_name">{{contacts[counter].name}}</h2>
+
+                            <p>Ultimo accesso oggi alle</p>
+
+                        </div>
+    
+
+                    </div>
+
+                    <nav class="contact_chat_menu flex">
+
+                        <i class="fas fa-search"></i>
+
+                        <i class="fas fa-paperclip"></i>
+
+                        <i class="fas fa-ellipsis-v"></i>
+
+                    </nav>
 
                 </header>
 

@@ -4,6 +4,8 @@ const root = new Vue({
 
     data:{
 
+        counter: 0,
+
         user: [
             
             {
