@@ -45,6 +45,7 @@ main .avatar{
 
 h2{
     font-weight: 400;
+    font-size: 1.3rem
 }
 
 header i{
@@ -80,13 +81,31 @@ nav{
 
 .sidebar{
     width: 420px;
-    height: 100%;
     background-color: rgb(250, 250, 250);
 }
 
 .alert{
     height: 90px;
+    padding: 20px;
     background-color: rgb(142, 218, 252);
+    justify-content: space-between;
+}
+
+.bell{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    justify-content: center;
+}
+
+.bell i{
+    color: rgb(142, 218, 252);
+    font-size: 1.7rem;
+}
+
+.text_alert p{
+    text-decoration: underline;
 }
 
 .search{
@@ -104,6 +123,7 @@ nav{
 }
 
 .contact_list{
+    height: calc(100% - 186px);
     overflow-y: auto;
 }
 
@@ -131,7 +151,7 @@ nav{
 
 #chat_window_main{
     width: 100%;
-    height: 440px;
+    height: calc(100% - 160px);
     background-image: url(../img/mine.jpg);
     overflow-y: auto;
 }
