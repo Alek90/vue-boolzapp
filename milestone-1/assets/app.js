@@ -9,7 +9,7 @@ const root = new Vue({
         user: [
             
             {
-                name: 'EleZe',
+                name: 'Nome Utente',
                 avatar: '_io',
                 visible: true,
             
