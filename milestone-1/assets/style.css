@@ -11,7 +11,7 @@
 }
 
 .container{
-    height: 400px;
+    height: 500px;
     display: flex;
 }
 
@@ -84,6 +84,10 @@ nav{
     background-color: rgb(250, 250, 250);
 }
 
+#sidebar_main{
+    height: calc(100% - 80px);
+}
+
 .alert{
     height: 90px;
     padding: 20px;
@@ -123,7 +127,7 @@ nav{
 }
 
 .contact_list{
-    height: calc(100% - 186px);
+    height: calc(100% - 146px);
     overflow-y: auto;
 }
 
