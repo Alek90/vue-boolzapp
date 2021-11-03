@@ -18,108 +18,106 @@
             <div class="container">
 
                 <!-- qui costruiremo la parte dell'app dedicata all'elenco dei contatti -->
-            <div class="sidebar">
+                <div class="sidebar">
 
-                <header class="flex" id="sidebar_header">
+                    <header class="flex" id="sidebar_header">
 
-                    <div class="user flex">
+                        <div class="user flex">
 
-                        <img class="avatar" :src="'./img/avatar' + user[0].avatar + '.jpg'" :alt="user[0].name">
-    
-                        <h2 class="user_name">{{user[0].name}}</h2>
-
-                    </div>
-
-                    <nav class="account_menu flex">
-
-                        <i class="fas fa-circle-notch"></i>
-
-                        <i class="fas fa-comment-alt"></i>
-
-                        <i class="fas fa-ellipsis-v"></i>
-
-                    </nav>
-
-                </header>
-
-                <main id="sidebar_main">
-
-                    <div class="alert">
-
-                    </div>
-
-                    <div class="search">
-
-                        <input type="text">
-
-                    </div>
-
-                    <div class="contact_list">
-
-                        <div v-for="(contact, index) in contacts" class="contact flex">
-
-                            <img class="avatar" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
-
-                            <h2>{{contact.name}}</h2>
+                            <img class="avatar" :src="'./img/avatar' + user[0].avatar + '.jpg'" :alt="user[0].name">
+        
+                            <h2 class="user_name">{{user[0].name}}</h2>
 
                         </div>
 
-                    </div>
+                        <nav class="account_menu flex">
 
-                </main>
+                            <i class="fas fa-circle-notch"></i>
 
-            </div>
+                            <i class="fas fa-comment-alt"></i>
 
-            <!-- qui costruiremo la finestra dedicata alla chat con il contatto selezionato -->
-            <div class="chat_window">
+                            <i class="fas fa-ellipsis-v"></i>
 
-                <header class="flex" id="chat_window_header">
+                        </nav>
 
-                    <div class="contact flex">
+                    </header>
 
-                        <img class="avatar" :src="'./img/avatar' + contacts[counter].avatar + '.jpg'" :alt="user[0].name">
+                    <main id="sidebar_main">
 
-
-                        <div class="chat_info">
-                            
-                            <h2 class="contact_name">{{contacts[counter].name}}</h2>
-
-                            <p>Ultimo accesso oggi alle</p>
+                        <div class="alert">
 
                         </div>
-    
 
-                    </div>
+                        <div class="search">
 
-                    <nav class="contact_chat_menu flex">
+                            <input type="text">
 
-                        <i class="fas fa-search"></i>
+                        </div>
 
-                        <i class="fas fa-paperclip"></i>
+                        <div class="contact_list">
 
-                        <i class="fas fa-ellipsis-v"></i>
+                            <div v-for="(contact, index) in contacts" class="contact flex">
 
-                    </nav>
+                                <img class="avatar" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
 
-                </header>
+                                <h2>{{contact.name}}</h2>
 
-                <main class="chat" id="chat_window_main">
+                            </div>
 
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur sequi voluptatibus laboriosam dolorem, enim, corporis quo repudiandae totam consequatur dolor quod fugit! Nisi fugit culpa molestias, cumque quae mollitia amet autem perferendis quos accusantium deleniti, enim tenetur dolores itaque sequi quod ipsa doloremque sint. Quod iusto, explicabo nihil deleniti fuga soluta nisi quos facilis impedit nemo cumque dignissimos, unde eum a esse accusantium cupiditate! Inventore, unde? Sint, sequi! Sequi soluta, quibusdam deleniti itaque pariatur sed dolorum impedit est hic fugiat perferendis accusantium sapiente aliquam quasi nisi natus? Illo, voluptate est voluptatum distinctio, dolor suscipit esse eligendi magni quibusdam minus error. Praesentium mollitia hic aut! Sequi in eos placeat ut facere autem facilis fugiat perspiciatis, cumque iure necessitatibus ipsam. Accusamus incidunt eos harum repellat adipisci placeat, sapiente autem assumenda maxime, magnam repellendus ipsa numquam explicabo nemo tenetur vero. Quia ipsum saepe distinctio deleniti fugiat error nulla, praesentium maiores odio ut quam facilis fuga aliquid obcaecati incidunt ex consequuntur quasi libero ducimus natus, vero nisi dolorum tempore accusamus? Sint ad nihil sed voluptas itaque consequuntur sunt esse, eaque iure omnis dolore, reiciendis eligendi vero enim atque fuga necessitatibus maiores architecto consequatur tempora, modi adipisci libero ea! Amet rem dolorem voluptas. Soluta quos quo provident itaque eius tempore maiores repellendus quidem obcaecati! Ut perferendis animi placeat nisi unde nulla dolorum non dolorem consequatur repellendus. Et fugiat laborum saepe iusto suscipit aliquam, doloribus in accusantium cupiditate id, dolorem, culpa rerum similique recusandae sunt. Natus, a dolorem aliquam vitae omnis eligendi id similique minima iusto perferendis sunt corrupti nobis maxime inventore rerum? Distinctio harum aliquid quis quisquam pariatur porro fugit tenetur. Provident, est maiores ipsum obcaecati deserunt eum harum ipsa ab earum amet corporis ullam fugit beatae tenetur id vero, repellat voluptate quidem quaerat mollitia inventore quia quae. Aut corporis totam odit, sed nobis quam natus distinctio unde magnam molestias eligendi veritatis officia esse cumque maxime reiciendis assumenda expedita, consequatur maiores ipsa rerum labore commodi. Mollitia, exercitationem. Minus rerum quas placeat facere veniam temporibus mollitia animi repellat. Temporibus, rerum quidem eveniet pariatur sunt rem. Et nobis sunt odit cum ipsa libero ipsum cupiditate atque sequi voluptatum quas totam aperiam, repudiandae officiis distinctio aspernatur cumque. Labore dolorum doloribus dolores laborum quis amet corporis iusto. Fuga totam odio sunt voluptas fugiat doloribus quia cupiditate. Cum id animi excepturi molestiae? Asperiores fugiat ex nam eius accusantium voluptates natus similique sit vitae rem atque cumque quisquam consequuntur magni vero quis praesentium nulla soluta, facere doloribus. Voluptatem in laborum cum reprehenderit dignissimos! Facere sapiente enim, cum ex nesciunt voluptate, eos maxime molestiae minima aliquam cupiditate ratione incidunt exercitationem itaque est deserunt. Natus minus quibusdam fugit corporis? Veritatis, similique omnis? Est nulla debitis quisquam suscipit, sint, vel provident odit veniam incidunt beatae adipisci consequuntur alias architecto! Nostrum modi nobis, blanditiis ratione ut vel. Ab, cum, id numquam nesciunt in nulla voluptates ipsum exercitationem, totam fugit aliquam illum nostrum asperiores placeat eveniet voluptate. Facere quae molestiae velit cupiditate repudiandae reiciendis dolorem quisquam minus cum facilis adipisci, saepe quidem aliquam dignissimos. Minus, quod.</p>
+                        </div>
 
-                </main>
+                    </main>
 
-                <footer class="interactive_space flex">
+                </div>
 
-                    <i class="far fa-smile"></i>
+                <!-- qui costruiremo la finestra dedicata alla chat con il contatto selezionato -->
+                <div class="chat_window">
 
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <header class="flex" id="chat_window_header">
 
-                    <i class="fas fa-microphone"></i>
+                        <div class="contact flex">
 
-                </footer>
+                            <img class="avatar" :src="'./img/avatar' + contacts[counter].avatar + '.jpg'" :alt="user[0].name">
 
-            </div>
+
+                            <div class="chat_info">
+                                
+                                <h2 class="contact_name">{{contacts[counter].name}}</h2>
+
+                                <p>Ultimo accesso oggi alle</p>
+
+                            </div>
+        
+
+                        </div>
+
+                        <nav class="contact_chat_menu flex">
+
+                            <i class="fas fa-search"></i>
+
+                            <i class="fas fa-paperclip"></i>
+
+                            <i class="fas fa-ellipsis-v"></i>
+
+                        </nav>
+
+                    </header>
+
+                    <main class="chat" id="chat_window_main">
+
+                    </main>
+
+                    <footer class="interactive_space flex">
+
+                        <i class="far fa-smile"></i>
+
+                        <input type="text" placeholder="Scrivi un messaggio">
+
+                        <i class="fas fa-microphone"></i>
+
+                    </footer>
+
+                </div>
 
             </div>
 
