@@ -13,16 +13,18 @@
     <div id="root">
 
         <!-- Questa la pagina generica -->
-        <div class="page flex">
+        <div class="page">
 
-            <!-- qui costruiremo la parte dell'app dedicata all'elenco dei contatti -->
+            <div class="container">
+
+                <!-- qui costruiremo la parte dell'app dedicata all'elenco dei contatti -->
             <div class="sidebar">
 
                 <header class="flex" id="sidebar_header">
 
                     <div class="user flex">
 
-                        <img class="avatar" :src="'../img/avatar' + user[0].avatar + '.jpg'" :alt="user[0].name">
+                        <img class="avatar" :src="'./img/avatar' + user[0].avatar + '.jpg'" :alt="user[0].name">
     
                         <h2 class="user_name">{{user[0].name}}</h2>
 
@@ -42,6 +44,28 @@
 
                 <main class="contact_list">
 
+                    <div class="alert">
+
+                    </div>
+
+                    <div class="search">
+
+                        <input type="text">
+
+                    </div>
+
+                    <div class="contact_list">
+
+                        <div v-for="(contact, index) in contacts" class="contact flex">
+
+                            <img class="avatar" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
+
+                            <h2>{{contact.name}}</h2>
+
+                        </div>
+
+                    </div>
+
                 </main>
 
             </div>
@@ -53,7 +77,8 @@
 
                     <div class="contact flex">
 
-                        <img class="avatar" :src="'../img/avatar' + contacts[counter].avatar + '.jpg'" :alt="user[0].name">
+                        <img class="avatar" :src="'./img/avatar' + contacts[counter].avatar + '.jpg'" :alt="user[0].name">
+
 
                         <div class="chat_info">
                             
@@ -78,11 +103,25 @@
 
                 </header>
 
-                <main class="chat">
+                <main class="chat" id="chat_window_main">
 
                 </main>
 
+                <footer class="interactive_space flex">
+
+                    <i class="far fa-smile"></i>
+
+                    <input type="text" placeholder="Scrivi un messaggio">
+
+                    <i class="fas fa-microphone"></i>
+
+                </footer>
+
             </div>
+
+            </div>
+
+            
 
         </div>
     </div>
