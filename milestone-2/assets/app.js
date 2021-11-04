@@ -103,6 +103,17 @@ const root = new Vue({
             },
         ],
 
+    },
+
+    methods:{
+
+        changeSelector (index){
+            console.log("ciao");
+            if(this.selector != index){
+                this.selector = index
+                console.log(this.selector);
+            }
+        }
     }
 })
 
