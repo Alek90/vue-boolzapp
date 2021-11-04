@@ -7,7 +7,6 @@ const root = new Vue({
         selector: 0,
 
         newMessage: {
-
             date: '',
             text: '',
             status: 'sent'
@@ -132,6 +131,7 @@ const root = new Vue({
                 gli deve essere applicata la data;
                 gli deve seguire al tempo di 1 secondo un .message . received_message;
             */
+        
         }
     }
 })
