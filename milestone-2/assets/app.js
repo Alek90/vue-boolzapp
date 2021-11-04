@@ -6,6 +6,8 @@ const root = new Vue({
 
         selector: 0,
 
+        newMessage: "",
+
         user: [
             
             {
@@ -113,6 +115,16 @@ const root = new Vue({
                 this.selector = index
                 console.log(this.selector);
             }
+        },
+
+        insertNewMessage(){
+            console.log(this.newMessage);
+            /*  questo messaggio deve essere inserito all'interno di un .message .sent_message;
+                per fare ciò deve entrare in messages del relativo contact;
+                gli deve essere applicata la proprietà status: 'sent';
+                gli deve essere applicata la data;
+                gli deve seguire al tempo di 1 secondo un .message . received_message;
+            */
         }
     }
 })
