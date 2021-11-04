@@ -135,11 +135,11 @@
 
                         <div v-for="message in contacts[selector].messages" class="chat_message flex">
 
-                            <div  class="message" :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
+                            <div  class="message flex" :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
                                 
                                 <p class="message_text">{{message.text}}</p>
 
-                                <small>{{message.date}}</small>
+                                <p class="small">{{message.date}}</p>
 
                             </div>
 
