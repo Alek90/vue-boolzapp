@@ -15,71 +15,38 @@
         <!-- Questa la pagina generica -->
         <div class="page">
 
-            <div class="page_header flex y_center">
+            <div class="page_header"></div>
 
-                <header class="flex y_center" id="sidebar_header">
-
-                    <div class="user flex y_center">
-
-                        <img class="avatar" :src="'./img/avatar' + user[0].avatar + '.jpg'" :alt="user[0].name">
-    
-                        <h2 class="user_name">{{user[0].name}}</h2>
-
-                    </div>
-
-                    <nav class="account_menu flex y_center">
-
-                        <i class="fas fa-circle-notch"></i>
-
-                        <i class="fas fa-comment-alt"></i>
-
-                        <i class="fas fa-ellipsis-v"></i>
-
-                    </nav>
-
-                </header>
-
-                
-                <header class="flex y_center" id="chat_window_header">
-
-                    <div class="contact flex y_center">
-
-                        <img class="avatar" :src="'./img/avatar' + contacts[counter].avatar + '.jpg'" :alt="user[0].name">
+            <div class="page_main"></div>
 
 
-                        <div class="chat_info">
-                            
-                            <h2 class="contact_name">{{contacts[counter].name}}</h2>
-
-                            <p>Ultimo accesso oggi alle</p>
-
-                        </div>
-    
-
-                    </div>
-
-                    <nav class="contact_chat_menu flex y_center">
-
-                        <i class="fas fa-search"></i>
-
-                        <i class="fas fa-paperclip"></i>
-
-                        <i class="fas fa-ellipsis-v"></i>
-
-                    </nav>
-
-                </header>
-
-            </div>
-
-            <main class="page_main"></main>
 
             <div class="container">
 
                 <!-- qui costruiremo la parte dell'app dedicata all'elenco dei contatti -->
                 <div class="sidebar">
 
-                    
+                    <header class="flex y_center" id="sidebar_header">
+
+                        <div class="user flex y_center">
+    
+                            <img class="avatar" :src="'./img/avatar' + user[0].avatar + '.jpg'" :alt="user[0].name">
+        
+                            <h2 class="user_name">{{user[0].name}}</h2>
+    
+                        </div>
+    
+                        <nav class="account_menu flex y_center">
+    
+                            <i class="fas fa-circle-notch"></i>
+    
+                            <i class="fas fa-comment-alt"></i>
+    
+                            <i class="fas fa-ellipsis-v"></i>
+    
+                        </nav>
+    
+                    </header>    
 
                     <main id="sidebar_main">
 
@@ -134,6 +101,35 @@
                 <!-- qui costruiremo la finestra dedicata alla chat con il contatto selezionato -->
                 <div class="chat_window">
 
+                    <header class="flex y_center" id="chat_window_header">
+
+                        <div class="contact_chat flex y_center">
+    
+                            <img class="avatar" :src="'./img/avatar' + contacts[counter].avatar + '.jpg'" :alt="user[0].name">
+    
+    
+                            <div class="chat_info">
+                                
+                                <h2 class="contact_name">{{contacts[counter].name}}</h2>
+    
+                                <p>Ultimo accesso oggi alle</p>
+    
+                            </div>
+        
+    
+                        </div>
+    
+                        <nav class="contact_chat_menu flex y_center">
+    
+                            <i class="fas fa-search"></i>
+    
+                            <i class="fas fa-paperclip"></i>
+    
+                            <i class="fas fa-ellipsis-v"></i>
+    
+                        </nav>
+    
+                    </header>
 
                     <main class="chat" id="chat_window_main">
                     </main>
@@ -152,9 +148,8 @@
 
             </div>
 
-            
-
         </div>
+
     </div>
 
 
