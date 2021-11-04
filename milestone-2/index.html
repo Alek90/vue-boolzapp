@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div id="root">
+
+        <!-- Questa la pagina generica -->
+        <div class="page">
+
+            <div class="page_header"></div>
+
+            <div class="page_main"></div>
+
+
+
+            <div class="container">
+
+                <!-- qui costruiremo la parte dell'app dedicata all'elenco dei contatti -->
+                <div class="sidebar">
+
+                    <header class="flex y_center" id="sidebar_header">
+
+                        <div class="user flex y_center">
+    
+                            <img class="avatar" :src="'./img/avatar' + user[0].avatar + '.jpg'" :alt="user[0].name">
+        
+                            <h2 class="user_name">{{user[0].name}}</h2>
+    
+                        </div>
+    
+                        <nav class="account_menu flex y_center">
+    
+                            <i class="fas fa-circle-notch"></i>
+    
+                            <i class="fas fa-comment-alt"></i>
+    
+                            <i class="fas fa-ellipsis-v"></i>
+    
+                        </nav>
+    
+                    </header>    
+
+                    <main id="sidebar_main">
+
+                        <div class="alert flex y_center">
+
+                            <div class="bell flex y_center">
+
+                                <i class="fas fa-bell-slash"></i>
+
+                            </div>
+
+                            <div class="text_alert">
+
+                                <h2>Ricevi notifiche di nuovi messaggi</h2>
+
+                                <p>Attiva notifiche desktop</p>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="search bg_white">
+
+                            <p>
+                                <i class="fas fa-search"></i>
+                                Cerca o inizia una nuova chat
+                            </p>
+
+                        </div>
+
+                        <div class="contact_list bg_white">
+
+                            <div v-for="(contact, index) in contacts" class="contact flex y_center">
+    
+                                <img class="avatar" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
+    
+                                <div class="contact_name">
+                                        
+                                    <h2>{{contact.name}}</h2>
+    
+                                </div>
+    
+                            </div>
+
+
+                        </div>
+
+                    </main>
+
+                </div>
+
+                <!-- qui costruiremo la finestra dedicata alla chat con il contatto selezionato -->
+                <div class="chat_window">
+
+                    <header class="flex y_center" id="chat_window_header">
+
+                        <div class="contact_chat flex y_center">
+    
+                            <img class="avatar" :src="'./img/avatar' + contacts[selector].avatar + '.jpg'" :alt="'avatar' + contacts[selector].name">
+    
+    
+                            <div class="chat_info">
+                                
+                                <h2 class="contact_name">{{contacts[selector].name}}</h2>
+    
+                                <p>Ultimo accesso oggi alle</p>
+    
+                            </div>
+        
+    
+                        </div>
+    
+                        <nav class="contact_chat_menu flex y_center">
+    
+                            <i class="fas fa-search"></i>
+    
+                            <i class="fas fa-paperclip"></i>
+    
+                            <i class="fas fa-ellipsis-v"></i>
+    
+                        </nav>
+    
+                    </header>
+
+                    <main class="chat" id="chat_window_main">
+
+                        <div v-for="(message, status) in contacts[selector].messages" class="chat_message">
+
+                            <div  class="message">{{message.text}}</div>
+
+                        </div>
+
+                    </main>
+
+                    <footer class="interactive_space flex y_center">
+
+                        <i class="far fa-smile"></i>
+
+                        <input type="text" placeholder="Scrivi un messaggio">
+
+                        <i class="fas fa-microphone"></i>
+
+                    </footer>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./assets/app.js"></script>
+    
+</body>
+</html>
