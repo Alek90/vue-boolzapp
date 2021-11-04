@@ -6,6 +6,12 @@ const root = new Vue({
 
         selector: 0,
 
+        autoResponse: {
+            date: '',
+            text: 'Ok Ok',
+            status: 'received'
+        },
+
         newMessage: {
             date: '',
             text: '',
@@ -15,7 +21,7 @@ const root = new Vue({
         user: [
             
             {
-                name: 'Nome Utente',
+                name: 'EleZe',
                 avatar: '_io',
                 visible: true,
             
@@ -123,11 +129,17 @@ const root = new Vue({
 
         insertNewMessage(){
             console.log(this.newMessage);
-            this.contacts[this.selector].messages.push(this.newMessage)
+            this.contacts[this.selector].messages.push(this.newMessage);
             console.log(this.contacts[this.selector].messages);
-            /*  questo messaggio deve essere inserito all'interno di un .message .sent_message;
-                per fare ciò deve entrare in messages del relativo contact;
-                gli deve essere applicata la proprietà status: 'sent';
+
+            setTimeout (() =>{
+                console.log("ok ok");
+                this.contacts[this.selector].messages.push(this.autoResponse);
+            }, 1000);
+
+            /*  questo messaggio deve essere inserito all'interno di un .message .sent_message; V
+                per fare ciò deve entrare in messages del relativo contact; V
+                gli deve essere applicata la proprietà status: 'sent'; V
                 gli deve essere applicata la data;
                 gli deve seguire al tempo di 1 secondo un .message . received_message;
             */
