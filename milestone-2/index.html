@@ -81,7 +81,7 @@
 
                             <div v-for="(contact, index) in contacts" @click="changeSelector(index)" class="contact flex y_center">
     
-                                <img class="avatar" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="'avatar' contact.index">
+                                <img class="avatar" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.index + contact.name">
     
                                 <div class="contact_name">
                                         
@@ -153,7 +153,8 @@
 
                         <i class="far fa-smile"></i>
 
-                        <input @keyUp.enter="insertNewMessage" type="text" v-model="newMessage" placeholder="Scrivi un messaggio"> 
+                        <input @keyUp.enter="insertNewMessage" type="text" v-model="newMessage.text" placeholder="Scrivi un messaggio"> 
+
                         <i class="fas fa-microphone"></i>
 
                     </footer>

@@ -6,7 +6,12 @@ const root = new Vue({
 
         selector: 0,
 
-        newMessage: "",
+        newMessage: {
+
+            date: '',
+            text: '',
+            status: 'sent'
+        },
 
         user: [
             
@@ -119,6 +124,8 @@ const root = new Vue({
 
         insertNewMessage(){
             console.log(this.newMessage);
+            this.contacts[this.selector].messages.push(this.newMessage)
+            console.log(this.contacts[this.selector].messages);
             /*  questo messaggio deve essere inserito all'interno di un .message .sent_message;
                 per fare ciò deve entrare in messages del relativo contact;
                 gli deve essere applicata la proprietà status: 'sent';
