@@ -7,7 +7,7 @@ const root = new Vue({
         selector: 0,
 
         autoResponse: {
-            date: dayjs('MM/DD/YY H:mm:ss A Z'),
+            date: dayjs(),
             text: 'Ok Ok',
             status: 'received'
         },
@@ -126,8 +126,7 @@ const root = new Vue({
             console.log("ciao");
             if(this.selector != index){
                 this.selector = index
-                console.log(this.selector);
-            }
+            };
         },
 
         insertNewMessage(){
@@ -139,13 +138,11 @@ const root = new Vue({
                 status: 'sent'
             });
             this.messageText = '';
-            console.log(this.contacts[this.selector].messages);
+            console.log(dayjs());
 
             // generare una risposta dopo un secondo dall'invio del messaggio;
             setTimeout (() =>{
-                console.log("ok ok");
                 this.contacts[this.selector].messages.push(this.autoResponse);
-                console.log(this.newMessage.text);
             }, 1000);
 
         },
@@ -153,13 +150,11 @@ const root = new Vue({
         menuMessageVisible(index){
             console.log("menu");
             this.menuMessage.index = index;
-            console.log(this.menuMessage.index);
             if(this.menuMessage.open === false){
                 this.menuMessage.open = true
-                console.log(this.menuMessage.open);
             }else {
                 this.menuMessage.open = false
-            }
+            };
 
         },
 
