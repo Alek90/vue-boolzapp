@@ -139,7 +139,6 @@ const root = new Vue({
                 console.log("ok ok");
                 this.contacts[this.selector].messages.push(this.autoResponse);
                 console.log(this.newMessage.text);
-                this.newMessage.text = '';
             }, 1000);
 
 
