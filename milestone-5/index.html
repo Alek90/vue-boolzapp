@@ -78,7 +78,7 @@
 
                         <div class="contact_list bg_white">
 
-                            <div v-for="(contact, index) in contacts" @click="changeSelector(index)" class="contact flex y_center" v-show="contact.name.includes(searching)">
+                            <div v-for="(contact, index) in contacts" @click="changeSelector(index)" class="contact flex y_center" v-show="contact.name.toLowerCase().includes(searching)">
     
                                 <img class="avatar" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.index + contact.name">
     
@@ -131,13 +131,13 @@
 
                     <main class="chat" id="chat_window_main">
 
-                        <div v-for="(message, index) in contacts[selector].messages" @click="menuVisible = true" class="chat_message flex">
+                        <div v-for="(message, index) in contacts[selector].messages" @click="menuMessageVisible(index)" class="chat_message flex">
 
                             <div  class="message flex" :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
                                 
                                 <p class="message_text">{{message.text}}</p>
 
-                                <div v-show="menuVisible === true" class="menu_message">
+                                <div class="menu_message">
 
                                     <p class="info_message">
                                         Info messaggio

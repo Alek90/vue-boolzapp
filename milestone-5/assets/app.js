@@ -16,8 +16,10 @@ const root = new Vue({
 
         searching: '',
 
-        menuVisible: false,
-
+        menuMessage: {
+            index: 0,
+            open: false
+        },
 
         user: [
             
@@ -145,6 +147,13 @@ const root = new Vue({
                 this.contacts[this.selector].messages.push(this.autoResponse);
                 console.log(this.newMessage.text);
             }, 1000);
+
+        },
+
+        menuMessageVisible(index){
+            console.log("menu");
+            this.menuMessage.index = index;
+            console.log(this.menuMessage.index);
 
         },
 
