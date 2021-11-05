@@ -146,9 +146,8 @@ const root = new Vue({
 
         },
 
-        test(){
-            console.log("stai scrivendo");
-        }
-    }
+    },
 })
+
+
 
