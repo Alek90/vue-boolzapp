@@ -146,6 +146,10 @@ const root = new Vue({
 
         },
 
+        deleteMessage(index){
+            this.contacts[this.selector].messages.splice(index, 1);
+        }
+
     },
 })
 

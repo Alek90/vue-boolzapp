@@ -131,9 +131,9 @@
 
                     <main class="chat" id="chat_window_main">
 
-                        <div v-for="message in contacts[selector].messages" class="chat_message flex">
+                        <div v-for="(message, index) in contacts[selector].messages" class="chat_message flex">
 
-                            <div  class="message flex" :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
+                            <div  class="message flex" @click="deleteMessage()" :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
                                 
                                 <p class="message_text">{{message.text}}</p>
 
