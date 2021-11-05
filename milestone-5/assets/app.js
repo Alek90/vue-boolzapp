@@ -7,7 +7,7 @@ const root = new Vue({
         selector: 0,
 
         autoResponse: {
-            date: '',
+            date: dayjs('MM/DD/YY H:mm:ss A Z'),
             text: 'Ok Ok',
             status: 'received'
         },
