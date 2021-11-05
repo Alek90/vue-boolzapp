@@ -134,8 +134,11 @@ const root = new Vue({
 
             setTimeout (() =>{
                 console.log("ok ok");
-                this.contacts[this.selector].messages.push(this.autoResponse)
+                this.contacts[this.selector].messages.push(this.autoResponse);
+                console.log(this.newMessage.text);
+                this.newMessage.text = '';
             }, 1000);
+
 
             /*  questo messaggio deve essere inserito all'interno di un .message .sent_message; V
                 per fare ciò deve entrare in messages del relativo contact; V
