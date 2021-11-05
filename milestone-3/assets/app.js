@@ -12,11 +12,8 @@ const root = new Vue({
             status: 'received'
         },
 
-        newMessage: {
-            date: '',
-            text: '',
-            status: 'sent'
-        },
+        messageText: '',
+
 
         user: [
             
@@ -128,8 +125,14 @@ const root = new Vue({
         },
 
         insertNewMessage(){
-            console.log(this.newMessage);
-            this.contacts[this.selector].messages.push(this.newMessage);
+            console.log(this.messageText);
+            (this.messageText);
+            this.contacts[this.selector].messages.push({ 
+                date: '',
+                text: this.messageText,
+                status: 'sent'
+            });
+            this.messageText = '';
             console.log(this.contacts[this.selector].messages);
 
             setTimeout (() =>{
