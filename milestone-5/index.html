@@ -137,7 +137,7 @@
                                 
                                 <p class="message_text">{{message.text}}</p>
 
-                                <div class="menu_message">
+                                <div :class="menuMessage.open === true ? 'open' : 'close'" class="menu_message">
 
                                     <p class="info_message">
                                         Info messaggio

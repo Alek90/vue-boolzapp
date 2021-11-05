@@ -222,11 +222,14 @@ nav{
     align-self: flex-end;
 }
 
-.menu_message{
+.open{
     padding: 20px;
     background-color: rgb(177, 177, 177);
-    border: 1px solid rgb(107, 115, 118);
-    
+    border: 1px solid rgb(107, 115, 118)
+}
+
+.close{
+    display: none;
 }
 
 .interactive_space {

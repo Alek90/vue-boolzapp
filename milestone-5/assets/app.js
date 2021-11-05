@@ -154,6 +154,12 @@ const root = new Vue({
             console.log("menu");
             this.menuMessage.index = index;
             console.log(this.menuMessage.index);
+            if(this.menuMessage.open === false){
+                this.menuMessage.open = true
+                console.log(this.menuMessage.open);
+            }else {
+                this.menuMessage.open = false
+            }
 
         },
 
