@@ -125,8 +125,8 @@ const root = new Vue({
         },
 
         insertNewMessage(){
-            console.log(this.messageText);
-            (this.messageText);
+
+            // il testo inviato viene salvato nella proprietà di un nuovo oggetto all'interno dei messages del contatto in chat;
             this.contacts[this.selector].messages.push({ 
                 date: '',
                 text: this.messageText,
@@ -135,19 +135,13 @@ const root = new Vue({
             this.messageText = '';
             console.log(this.contacts[this.selector].messages);
 
+            // generare una risposta dopo un secondo dall'invio del messaggio;
             setTimeout (() =>{
                 console.log("ok ok");
                 this.contacts[this.selector].messages.push(this.autoResponse);
                 console.log(this.newMessage.text);
             }, 1000);
 
-
-            /*  questo messaggio deve essere inserito all'interno di un .message .sent_message; V
-                per fare ciò deve entrare in messages del relativo contact; V
-                gli deve essere applicata la proprietà status: 'sent'; V
-                gli deve essere applicata la data;
-                gli deve seguire al tempo di 1 secondo un .message . received_message;
-            */
         },
     }
 })
