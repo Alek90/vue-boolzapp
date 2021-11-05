@@ -134,7 +134,7 @@ const root = new Vue({
 
             setTimeout (() =>{
                 console.log("ok ok");
-                this.contacts[this.selector].messages.push(this.autoResponse);
+                this.contacts[this.selector].messages.push(this.autoResponse)
             }, 1000);
 
             /*  questo messaggio deve essere inserito all'interno di un .message .sent_message; V
@@ -144,10 +144,6 @@ const root = new Vue({
                 gli deve seguire al tempo di 1 secondo un .message . received_message;
             */
         },
-
-        resetMessage(){
-            this.newMessage.text = "";
-        }
     }
 })
 
