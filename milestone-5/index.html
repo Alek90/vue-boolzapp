@@ -15,8 +15,10 @@
         <!-- Questa la pagina generica -->
         <div class="page">
 
+            <!-- utilizzato solo per dare lo sfondo superiore -->
             <div class="page_header"></div>
 
+            <!-- utilizzato per dare lo sfondo principale -->
             <div class="page_main"></div>
 
 
@@ -28,6 +30,7 @@
 
                     <header class="flex y_center" id="sidebar_header">
 
+                        <!-- profilo dello user -->
                         <div class="user flex y_center">
     
                             <img class="avatar" :src="'./img/avatar' + user[0].avatar + '.jpg'" :alt="user[0].name">
@@ -47,9 +50,12 @@
                         </nav>
     
                     </header>    
+                    <!-- /sidebar_header -->
+
 
                     <main id="sidebar_main">
 
+                        <!-- contiene un menu per le notifiche -->
                         <div class="alert flex y_center">
 
                             <div class="bell flex y_center">
@@ -68,6 +74,7 @@
                             
                         </div>
 
+                        <!-- da qui è possibile filtrare i contatti -->
                         <div class="search bg_white">
 
                             <i class="fas fa-search"></i>
@@ -76,6 +83,7 @@
 
                         </div>
 
+                        <!-- lista dei contatti -->
                         <div class="contact_list bg_white">
 
                             <div v-for="(contact, index) in contacts" @click="changeSelector(index)" class="contact flex y_center" v-show="contact.name.toLowerCase().includes(searching)">
@@ -93,14 +101,19 @@
                         </div>
 
                     </main>
+                    <!-- /sidebar_main -->
+
 
                 </div>
+                <!-- /sidebar -->
+
 
                 <!-- qui costruiremo la finestra dedicata alla chat con il contatto selezionato -->
                 <div class="chat_window">
 
                     <header class="flex y_center" id="chat_window_header">
 
+                        <!-- questo è il contatto selezionato per chattare -->
                         <div class="contact_chat flex y_center">
     
                             <img class="avatar" :src="'./img/avatar' + contacts[selector].avatar + '.jpg'" :alt="'avatar' + contacts[selector].name">
@@ -117,6 +130,7 @@
     
                         </div>
     
+                        <!-- icone per funzioni (non attive) -->
                         <nav class="contact_chat_menu flex y_center">
     
                             <i class="fas fa-search"></i>
@@ -128,21 +142,28 @@
                         </nav>
     
                     </header>
+                    <!-- /chat_window_header -->
+
 
                     <main class="chat" id="chat_window_main">
 
+                        <!-- per ogni messaggio scambiato con questo contatto apparirà una nuvoletta -->
                         <div v-for="(message, index) in contacts[selector].messages" @click="menuMessageVisible(index)" class="chat_message flex">
 
+
+                            <!-- le nuvolette saranno differenti se il messaggio è inviato o ricevuto -->
                             <div  class="message flex" :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
                                 
                                 <p class="message_text">{{message.text}}</p>
 
+                                <!-- qui il menu del messaggio, visibile solo al click sul messaggio -->
                                 <div :class="menuMessage.open === true && menuMessage.index === index ? 'open' : 'close'" class="menu_message">
 
                                     <p class="info_message">
                                         Info messaggio
                                     </p>
 
+                                    <!-- cliccando qui si eliminerà il messaggio relativo -->
                                     <p @click="deleteMessage(index)" class="delete_message">
                                         Cancella questo messaggio
                                     </p>
@@ -158,24 +179,32 @@
                         </div>
 
                     </main>
+                    <!-- /chat_window_main -->
+
 
                     <footer class="interactive_space flex y_center">
 
                         <i class="far fa-smile"></i>
 
+                        <!-- qui si può scrivere un nuovo messaggio da inviare premendo enter -->
                         <input @keyUp.enter="insertNewMessage" type="text" v-model="messageText" value="message" placeholder="Scrivi un messaggio"> 
 
                         <i class="fas fa-microphone"></i>
 
                     </footer>
+                    <!-- /footer -->
 
                 </div>
+                <!-- /chat_window -->
 
             </div>
+            <!-- /container -->
 
         </div>
+        <!-- /page -->
 
     </div>
+    <!-- /root -->
 
 
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>

@@ -7,7 +7,7 @@ const root = new Vue({
         selector: 0,
 
         autoResponse: {
-            date: dayjs(),
+            date: '',
             text: 'Ok Ok',
             status: 'received'
         },
@@ -122,6 +122,7 @@ const root = new Vue({
 
     methods:{
 
+        // cambia il valore del selettore;
         changeSelector (index){
             console.log("ciao");
             if(this.selector != index){
@@ -147,6 +148,7 @@ const root = new Vue({
 
         },
 
+        // aprire e chiudere un menu relativo al messaggio;
         menuMessageVisible(index){
             console.log("menu");
             this.menuMessage.index = index;
@@ -158,6 +160,7 @@ const root = new Vue({
 
         },
 
+        // cancellare il messaggio
         deleteMessage(index){
             this.contacts[this.selector].messages.splice(index, 1);
         }
