@@ -78,7 +78,7 @@
 
                         <div class="contact_list bg_white">
 
-                            <div v-for="(contact, index) in contacts" @click="changeSelector(index)" class="contact flex y_center" v-show="contact.name.includes(searching)">
+                            <div v-for="(contact, index) in contacts" @click="changeSelector(index)" class="contact flex y_center" v-show="contact.name.toLowerCase().includes(searching)">
     
                                 <img class="avatar" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.index + contact.name">
     
