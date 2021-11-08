@@ -152,21 +152,17 @@
 
 
                             <!-- le nuvolette saranno differenti se il messaggio è inviato o ricevuto -->
-                            <div  class="message flex" :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
+                            <div  class="message" :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
                                 
                                 <p class="message_text">{{message.text}}</p>
 
                                 <!-- qui il menu del messaggio, visibile solo al click sul messaggio -->
                                 <div :class="menuMessage.open === true && menuMessage.index === index ? 'open' : 'close'" class="menu_message">
 
-                                    <p class="info_message">
-                                        Info messaggio
-                                    </p>
+                                    <i class="fas fa-info-circle"></i>
 
                                     <!-- cliccando qui si eliminerà il messaggio relativo -->
-                                    <p @click="deleteMessage(index)" class="delete_message">
-                                        Cancella questo messaggio
-                                    </p>
+                                    <i @click="deleteMessage(index)" class="fas fa-trash-alt"></i>
 
                                 </div>
 
