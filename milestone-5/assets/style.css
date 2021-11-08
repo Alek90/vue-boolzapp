@@ -200,7 +200,7 @@ nav{
 }
 
 .sent_message{
-    padding: 3px;
+    padding: 5px;
     align-self: flex-end;
     background-color: rgb(213, 249, 186);
     border-radius: 10px;
@@ -220,6 +220,7 @@ nav{
 .small{
     font-size: 0.7rem;
     text-align: right;
+    color: rgb(189, 185, 193);
 }
 
 .menu_message{
