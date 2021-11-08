@@ -134,7 +134,7 @@ const root = new Vue({
 
             // il testo inviato viene salvato nella proprietà di un nuovo oggetto all'interno dei messages del contatto in chat;
             this.contacts[this.selector].messages.push({ 
-                date: 'data',
+                date: 'dates',
                 text: this.messageText,
                 status: 'sent'
             });
